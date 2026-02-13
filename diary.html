@@ -2,37 +2,73 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>今日の日記</title>
+<title>日記</title>
 <style>
 body {
   background-color: #222222;
   color: #ffffff;
   font-family: sans-serif;
-  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
 }
-a { color: #ffffff; }
-.box {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
+
+/* タイトル */
+h1 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+/* 日記ボックス */
+.post {
+  margin-bottom: 50px;
+  padding: 35px;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  font-size: 22px;   /* ← ここが本文サイズ */
+  line-height: 1.8;
+}
+
+/* 日付 */
+.date {
+  font-size: 16px;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+
+/* 戻るボタン（左上固定） */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 20px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid #ffffff;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #222222;
 }
 </style>
 </head>
 
 <body>
 
-<h1>📖 今日の日記</h1>
+<a href="index.html" class="back-btn">← トップへ</a>
 
-<div class="box">
-  <h2>2026/02/14</h2>
-  <p>今日は〇〇した！楽しかった。</p>
+<h1>📖 日記</h1>
+
+<div class="post">
+  <div class="date">2026/02/14</div>
+  今日は〇〇した！めっちゃ楽しかった。
 </div>
 
-<br>
-<a href="diary-log.html">📚 過去の日記</a>
-<br><br>
-<a href="index.html">← 戻る</a>
+<div class="post">
+  <div class="date">2026/02/13</div>
+  学校で〇〇があった。
+</div>
 
 </body>
 </html>
