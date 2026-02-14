@@ -2,41 +2,60 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<!-- スマホ対応（超重要） -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>🍀見てくれてありがとう🍀</title>
 
 <style>
 
+/* 背景（海っぽいグラデーション） */
 body {
-  background-color: #222222;
-  color: #ffffff;
+
+  margin: 0;
+
+  background: linear-gradient(
+    to bottom,
+    #6ecbff,
+    #3aa6d0,
+    #1d6f9a,
+    #0b3c5d
+  );
+
+  color: white;
+
   font-family: sans-serif;
+
   text-align: center;
+
 }
 
 
 /* タイトル */
 h1 {
+
   font-size: 36px;
-  margin-top: 70px;
-  margin-bottom: 30px;
+
+  margin-top: 60px;
+
+  margin-bottom: 20px;
+
 }
 
 
-/* タイトルとボタンの間の画像 */
+/* 画像 */
 .bottom-img {
 
-  width: 40%;   /* ←小さくした */
+  width: 40%;
+
   max-width: 180px;
 
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
-  border-radius: 15px;
+  border-radius: 50%;
 
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.5s;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
 
 }
 
@@ -48,31 +67,33 @@ h1 {
 
   justify-content: center;
 
-  gap: 25px; /* ←間隔広げた */
-
-  margin-top: 20px;
+  gap: 20px;
 
   flex-wrap: wrap;
+
+  padding: 20px;
 
 }
 
 
-/* ボタン */
+/* 可愛いボタン */
 .button {
 
-  font-size: 22px; /* ←大きくした */
+  font-size: 18px;
 
-  padding: 15px 30px; /* ←大きくした */
+  padding: 14px 26px;
 
-  background: linear-gradient(145deg, #333, #111);
+  background: rgba(255,255,255,0.2);
 
-  color: white;
+  backdrop-filter: blur(10px);
+
+  border-radius: 30px;
 
   text-decoration: none;
 
-  border-radius: 15px;
+  color: white;
 
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 
   transition: 0.3s;
 
@@ -84,21 +105,33 @@ h1 {
 
   transform: scale(1.1);
 
-  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.35);
 
 }
 
 
-@keyframes fadeIn {
 
-from {
-opacity: 0;
-transform: translateY(20px);
+/* 🌊 スマホ用（重要） */
+@media (max-width: 600px) {
+
+h1 {
+
+  font-size: 26px;
+
 }
 
-to {
-opacity: 1;
-transform: translateY(0);
+.bottom-img {
+
+  width: 60%;
+
+}
+
+.button {
+
+  font-size: 16px;
+
+  padding: 12px 20px;
+
 }
 
 }
@@ -108,6 +141,7 @@ transform: translateY(0);
 </head>
 
 <body>
+
 
 
 <h1>🍀見てくれてありがとう🍀</h1>
