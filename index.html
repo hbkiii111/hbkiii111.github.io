@@ -2,43 +2,76 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>見てくれてありがとう</title>
+<title>My Page</title>
+
 <style>
+
 body {
   background-color: #222222;
   color: #ffffff;
   font-family: sans-serif;
   text-align: center;
-  padding-top: 100px;
+  margin: 0;
 }
 
+/* 上の画像 */
+.header-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* タイトル */
+h1 {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* ボタン */
 .button {
   display: block;
-  width: 90%;
-  max-width: 500px;
-  margin: 35px auto;
-  padding: 30px;
+  width: 85%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 25px;
   font-size: 24px;
-  font-weight: bold;
   border: 3px solid #ffffff;
-  border-radius: 18px;
+  border-radius: 20px;
   text-decoration: none;
   color: #ffffff;
-  transition: 0.3s;
 }
 
-.button:hover {
-  background-color: #444444;
+/* 下の余白 */
+.footer {
+  margin-top: 60px;
+  font-size: 14px;
+  opacity: 0.6;
 }
+
 </style>
+
 </head>
 
 <body>
 
-<h1 style="font-size:36px;">見てくれてありがとう</h1>
 
-<a href="diary.html" class="button"> 日記</a>
-<a href="favorites.html" class="button"> 好きなもの</a>
+<!-- 上の画像 -->
+<img src="top.jpg" class="header-img">
+
+
+<h1>My Page</h1>
+
+
+<a href="diary.html" class="button">日記</a>
+
+<a href="favorites.html" class="button">好きなもの</a>
+
+
+<div class="footer">
+  since 2026
+</div>
+
 
 </body>
 </html>
