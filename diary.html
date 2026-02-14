@@ -1,166 +1,275 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>日記</title>
 
+
 <style>
 
-body {
+body{
 
-  background-color: #222;
-  color: #eee;
-  font-family: sans-serif;
+background:#222;
 
-  max-width: 680px;
-  margin: auto;
+color:#eee;
 
-  padding: 60px 20px 30px;
+font-family:sans-serif;
+
+max-width:680px;
+
+margin:auto;
+
+padding:60px 20px 40px;
 
 }
 
 
 /* 戻る */
-.back-btn {
 
-  position: fixed;
-  top: 12px;
-  left: 12px;
+.back-btn{
 
-  font-size: 12px;
-  padding: 6px 12px;
+position:fixed;
 
-  border: 1px solid #555;
-  border-radius: 10px;
+top:12px;
 
-  text-decoration: none;
-  color: #eee;
+left:12px;
+
+font-size:12px;
+
+padding:6px 12px;
+
+border:1px solid #555;
+
+border-radius:10px;
+
+text-decoration:none;
+
+color:#eee;
 
 }
+
 
 
 /* タイトル */
-h1 {
 
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 10px;
+h1{
+
+text-align:center;
+
+font-size:24px;
+
+margin-bottom:10px;
 
 }
+
 
 
 /* 一言 */
-.message {
 
-  text-align: center;
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 40px;
+.message{
+
+text-align:center;
+
+font-size:14px;
+
+color:#aaa;
+
+margin-bottom:30px;
+
+}
+
+
+
+/* カレンダー */
+
+.calendar-box{
+
+margin-bottom:40px;
 
 }
 
 
-/* 日記 */
-.post {
 
-  margin-bottom: 35px;
-  padding-bottom: 25px;
+.calendar-header{
 
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+display:flex;
 
-  font-size: 15px;
-  line-height: 1.9;
+justify-content:center;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:10px;
 
 }
+
+
+.calendar-header button{
+
+background:none;
+
+border:1px solid #555;
+
+color:#aaa;
+
+padding:5px 10px;
+
+border-radius:8px;
+
+}
+
+
+#monthTitle{
+
+font-size:16px;
+
+color:#aaa;
+
+width:140px;
+
+text-align:center;
+
+}
+
+
+
+/* 今日に戻る */
+
+.today-btn{
+
+display:block;
+
+margin:10px auto;
+
+font-size:12px;
+
+padding:6px 12px;
+
+border:1px solid #555;
+
+border-radius:10px;
+
+background:none;
+
+color:#aaa;
+
+}
+
+
+
+/* カレンダーグリッド */
+
+.calendar-grid{
+
+display:grid;
+
+grid-template-columns:repeat(7,1fr);
+
+gap:6px;
+
+}
+
 
 
 /* 日付 */
-.date {
 
-  font-size: 11px;
-  color: #888;
-  margin-bottom: 12px;
+.day{
 
-}
+padding:8px 0;
 
+font-size:13px;
 
-/* 🌙 画像エリア */
-.photo {
+color:#444;
 
-  margin-top: 15px;
+border:1px solid #333;
 
-  display: flex;
-  gap: 10px;
-
-  flex-wrap: wrap;
+border-radius:6px;
 
 }
 
 
-/* 画像 */
-.photo img {
 
-  width: 100%;
-  max-width: 200px;
+/* 日記ある日 */
 
-  border-radius: 10px;
+.has{
 
-  cursor: pointer;
-
-  transition: 0.3s;
+border:1px solid #aaa;
 
 }
+
+
+.has a{
+
+color:#eee;
+
+text-decoration:none;
+
+display:block;
+
+}
+
 
 
 /* hover */
-.photo img:hover {
 
-  opacity: 0.8;
+.has a:hover{
 
-}
+background:#eee;
 
+color:#222;
 
-/* 拡大表示 */
-#overlay {
-
-  position: fixed;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0,0,0,0.9);
-
-  display: none;
-
-  justify-content: center;
-  align-items: center;
-
-}
-
-
-#overlay img {
-
-  max-width: 90%;
-  max-height: 90%;
+border-radius:6px;
 
 }
 
 
 
-/* スマホ */
-@media (max-width: 600px) {
+/* 今日 */
 
-.photo img {
+.today{
 
-max-width: 100%;
+background:#eee;
+
+color:#222;
+
+font-weight:bold;
 
 }
+
+
+
+/* 日記 */
+
+.post{
+
+margin-bottom:40px;
+
+padding-bottom:20px;
+
+border-bottom:1px solid rgba(255,255,255,0.2);
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+
+
+/* 日付 */
+
+.date{
+
+font-size:11px;
+
+color:#888;
+
+margin-bottom:10px;
 
 }
 
@@ -168,69 +277,308 @@ max-width: 100%;
 
 </head>
 
+
+
 <body>
+
 
 
 <a href="index.html" class="back-btn">← トップ</a>
 
 
+
 <h1>日記</h1>
+
 
 
 <div class="message">
 
-毎日かく<br>
-意味わからないことも言う
+毎日かく
 
 </div>
+
+
+
+
+<!-- カレンダー -->
+
+<div class="calendar-box">
+
+
+<div class="calendar-header">
+
+
+<button onclick="prevMonth()">←</button>
+
+
+<div id="monthTitle"></div>
+
+
+<button onclick="nextMonth()">→</button>
+
+
+</div>
+
+
+<button class="today-btn" onclick="goToday()">
+
+今日に戻る
+
+</button>
+
+
+<div class="calendar-grid" id="calendar"></div>
+
+
+</div>
+
 
 
 
 <!-- 日記 -->
 
-<div class="post">
+<div class="post" id="d20250810">
+
 
 <div class="date">2025/08/10</div>
+
 
 Z世代のZの意味毎回忘れる。日本地図と同じ。小学生の時おばあちゃんと暗記合宿したけど全然覚えられなかった。<br>
 関東で生まれたのに群馬と栃木どっちがどっちかわからない。岩手と秋田もわからない。近畿地方が1番よくわからなくて、今縦長の六角形みたいなやつ想像してる。でも中部地方は県名全部つぶやいた時に語呂とリズムがいいから覚えてる。場所もわかる。<br>
 義務教育の敗北ってバカにされるかもしれないけど、覚えられないものは仕方ないから。東京に行く用事があって色々調べた時に山手線全部覚えてたことがあったから、今のところあまり旅行に興味がないからわからないけど現地に行くことがあればきっといつか覚えると思う。
 
-</div>
 
 </div>
 
 
 
 
-<!-- 拡大用 -->
-<div id="overlay" onclick="closeImg()">
+<div class="post" id="d20250809">
 
-<img id="big">
+
+<div class="date">2025/08/09</div>
+
+
+日記テスト
+
 
 </div>
+
 
 
 
 <script>
 
-function openImg(src){
 
-document.getElementById("overlay").style.display="flex";
 
-document.getElementById("big").src=src;
+let now=new Date();
+
+
+let currentYear=now.getFullYear();
+
+
+let currentMonth=now.getMonth();
+
+
+
+
+/* 日記ある日 */
+
+let diaryDates=[
+
+
+"20250810",
+
+"20250809"
+
+
+];
+
+
+
+
+function drawCalendar(){
+
+
+const cal=document.getElementById("calendar");
+
+
+cal.innerHTML="";
+
+
+
+
+const first=new Date(currentYear,currentMonth,1);
+
+
+const last=new Date(currentYear,currentMonth+1,0);
+
+
+
+
+document.getElementById("monthTitle").innerHTML=
+
+currentYear+"年"+(currentMonth+1)+"月";
+
+
+
+
+for(let i=0;i<first.getDay();i++){
+
+cal.innerHTML+="<div></div>";
 
 }
 
 
-function closeImg(){
 
-document.getElementById("overlay").style.display="none";
+
+for(let d=1;d<=last.getDate();d++){
+
+
+let id=
+
+currentYear+
+
+String(currentMonth+1).padStart(2,"0")+
+
+String(d).padStart(2,"0");
+
+
+
+
+let has="";
+
+
+if(diaryDates.includes(id)){
+
+has="has";
 
 }
+
+
+
+
+let today="";
+
+
+if(
+
+d==now.getDate() &&
+
+currentMonth==now.getMonth() &&
+
+currentYear==now.getFullYear()
+
+){
+
+today="today";
+
+}
+
+
+
+
+if(has){
+
+cal.innerHTML+=
+
+'<div class="day '+has+' '+today+'">'+
+
+'<a href="#d'+id+'">'+d+'</a>'+
+
+'</div>';
+
+}
+
+
+else{
+
+cal.innerHTML+=
+
+'<div class="day">'+d+'</div>';
+
+}
+
+
+}
+
+
+}
+
+
+
+
+function prevMonth(){
+
+
+currentMonth--;
+
+
+if(currentMonth<0){
+
+currentMonth=11;
+
+currentYear--;
+
+}
+
+
+drawCalendar();
+
+
+}
+
+
+
+
+function nextMonth(){
+
+
+currentMonth++;
+
+
+if(currentMonth>11){
+
+currentMonth=0;
+
+currentYear++;
+
+}
+
+
+drawCalendar();
+
+
+}
+
+
+
+
+function goToday(){
+
+
+currentYear=now.getFullYear();
+
+
+currentMonth=now.getMonth();
+
+
+drawCalendar();
+
+
+}
+
+
+
+
+drawCalendar();
+
+
 
 </script>
 
 
+
 </body>
+
 </html>
