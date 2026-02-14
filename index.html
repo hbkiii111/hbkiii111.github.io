@@ -3,31 +3,30 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- スマホ対応（超重要） -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🍀見てくれてありがとう🍀</title>
+<title>深海のページ</title>
 
 <style>
 
-/* 背景（海っぽいグラデーション） */
+/* 🌌 深海背景 */
 body {
 
-  margin: 0;
+margin: 0;
 
-  background: linear-gradient(
-    to bottom,
-    #6ecbff,
-    #3aa6d0,
-    #1d6f9a,
-    #0b3c5d
-  );
+background: linear-gradient(
+to bottom,
+#02111b,
+#032b44,
+#053c5e,
+#010a12
+);
 
-  color: white;
+color: #cfe9ff;
 
-  font-family: sans-serif;
+font-family: sans-serif;
 
-  text-align: center;
+text-align: center;
 
 }
 
@@ -35,67 +34,74 @@ body {
 /* タイトル */
 h1 {
 
-  font-size: 36px;
+font-size: 36px;
 
-  margin-top: 60px;
+margin-top: 60px;
 
-  margin-bottom: 20px;
+margin-bottom: 30px;
+
+letter-spacing: 3px;
+
+text-shadow: 0 0 15px rgba(100,200,255,0.8);
+
+animation: fadeTitle 2s;
 
 }
 
 
-/* 画像 */
+/* 四角い画像 */
 .bottom-img {
 
-  width: 40%;
+width: 45%;
 
-  max-width: 180px;
+max-width: 220px;
 
-  margin-bottom: 30px;
+margin-bottom: 40px;
 
-  border-radius: 50%;
+border-radius: 15px;
 
-  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+box-shadow:
+0 0 20px rgba(0,150,255,0.6),
+0 0 40px rgba(0,80,150,0.4);
+
+animation: float 4s infinite ease-in-out;
 
 }
 
 
-/* ボタンまとめ */
+/* ボタン */
 .button-container {
 
-  display: flex;
+display: flex;
 
-  justify-content: center;
+justify-content: center;
 
-  gap: 20px;
+gap: 25px;
 
-  flex-wrap: wrap;
-
-  padding: 20px;
+flex-wrap: wrap;
 
 }
 
 
-/* 可愛いボタン */
 .button {
 
-  font-size: 18px;
+font-size: 18px;
 
-  padding: 14px 26px;
+padding: 14px 28px;
 
-  background: rgba(255,255,255,0.2);
+border-radius: 30px;
 
-  backdrop-filter: blur(10px);
+text-decoration: none;
 
-  border-radius: 30px;
+color: #dff6ff;
 
-  text-decoration: none;
+background: rgba(0,50,80,0.6);
 
-  color: white;
+box-shadow:
+0 0 10px rgba(0,150,255,0.5),
+inset 0 0 10px rgba(0,150,255,0.3);
 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-
-  transition: 0.3s;
+transition: 0.4s;
 
 }
 
@@ -103,34 +109,68 @@ h1 {
 /* ホバー */
 .button:hover {
 
-  transform: scale(1.1);
+transform: scale(1.1);
 
-  background: rgba(255,255,255,0.35);
+box-shadow:
+0 0 20px rgba(0,200,255,0.8),
+inset 0 0 20px rgba(0,200,255,0.5);
+
+}
+
+
+/* 浮くアニメーション */
+@keyframes float {
+
+0% { transform: translateY(0px); }
+
+50% { transform: translateY(-15px); }
+
+100% { transform: translateY(0px); }
+
+}
+
+
+/* タイトルフェード */
+@keyframes fadeTitle {
+
+from {
+
+opacity: 0;
+transform: translateY(-20px);
+
+}
+
+to {
+
+opacity: 1;
+transform: translateY(0);
+
+}
 
 }
 
 
 
-/* 🌊 スマホ用（重要） */
+/* 📱スマホ用 */
 @media (max-width: 600px) {
 
 h1 {
 
-  font-size: 26px;
+font-size: 26px;
 
 }
 
 .bottom-img {
 
-  width: 60%;
+width: 65%;
 
 }
 
 .button {
 
-  font-size: 16px;
+font-size: 16px;
 
-  padding: 12px 20px;
+padding: 12px 22px;
 
 }
 
@@ -144,7 +184,7 @@ h1 {
 
 
 
-<h1>🍀見てくれてありがとう🍀</h1>
+<h1>Deep Sea</h1>
 
 
 <img src="IMG_6887.jpeg" class="bottom-img">
