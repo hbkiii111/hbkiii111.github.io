@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- スマホ対応（重要） -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>好きなもの</title>
@@ -12,14 +11,14 @@
 
 body {
 
-  background-color: #222222;
-  color: #ffffff;
+  background-color: #222;
+  color: #eee;
   font-family: sans-serif;
-  text-align: center;
 
-  padding-top: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 680px;
+  margin: auto;
+
+  padding: 60px 20px 30px;
 
 }
 
@@ -29,20 +28,17 @@ body {
 
   position: fixed;
 
-  top: 20px;
-  left: 20px;
+  top: 12px;
+  left: 12px;
 
-  padding: 10px 15px;
+  font-size: 12px;
+  padding: 6px 12px;
 
-  font-size: 10px;
-
-  border: 2px solid #ffffff;
-
-  border-radius: 14px;
+  border: 1px solid #555;
+  border-radius: 10px;
 
   text-decoration: none;
-
-  color: #ffffff;
+  color: #eee;
 
 }
 
@@ -50,21 +46,27 @@ body {
 /* タイトル */
 h1 {
 
-  font-size: 26px;
+  text-align: center;
 
-  margin-bottom: 15px;
+  font-size: 24px;
+
+  margin-bottom: 10px;
 
 }
 
 
-/* 一言メッセージ */
+/* 一言 */
 .message {
 
-  font-size: 12px;
+  text-align: center;
 
-  color: #cccccc;
+  font-size: 14px;
 
-  margin-bottom: 30px;
+  color: #aaa;
+
+  margin-bottom: 35px;
+
+  line-height: 1.6;
 
 }
 
@@ -74,72 +76,76 @@ h1 {
 
   display: block;
 
-  width: 90%;
+  width: 100%;
 
-  max-width: 500px;
+  margin-bottom: 15px;
 
-  margin: 18px auto;
+  padding: 16px;
 
-  padding: 15px;
+  font-size: 15px;
 
-  font-size: 10px;
+  border: 1px solid #555;
 
-  border: 2px solid #ffffff;
-
-  border-radius: 16px;
+  border-radius: 12px;
 
   text-decoration: none;
 
-  color: #ffffff;
+  color: #eee;
 
-  transition: 0.3s;
+  transition: 0.2s;
 
 }
 
 
-/* ホバー */
+/* hover */
 .button:hover {
 
-  background-color: #ffffff;
-
-  color: #222222;
+  background-color: #eee;
+  color: #222;
 
 }
 
 
 
-/* 📱 スマホ用 */
+/* スマホ */
 @media (max-width: 600px) {
+
+
+body {
+
+padding-top: 50px;
+
+}
 
 
 h1 {
 
-  font-size: 22px;
+font-size: 22px;
 
 }
 
 
 .message {
 
-  font-size: 10px;
+font-size: 13px;
 
 }
 
 
 .button {
 
-  font-size: 14px;
+font-size: 14px;
 
-  padding: 18px;
+padding: 14px;
 
 }
 
 
 .back-btn {
 
-  font-size: 8px;
+font-size: 11px;
 
-  padding: 14px 13px;
+padding: 5px 10px;
 
 }
 
@@ -148,12 +154,13 @@ h1 {
 
 
 </style>
+
 </head>
 
 <body>
 
 
-<a href="index.html" class="back-btn">← 戻る</a>
+<a href="index.html" class="back-btn">← トップ</a>
 
 
 <h1>好きなもの</h1>
@@ -162,7 +169,8 @@ h1 {
 <div class="message">
 
 すごく好きなものをまとめる<br>
-  ↓のボタン押したら次のページにいけます
+
+ボタンを押すとそれぞれのページにいきます
 
 </div>
 
