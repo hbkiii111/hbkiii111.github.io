@@ -28,21 +28,37 @@ body {
 h1 {
   font-size: 32px;
   margin-top: 70px;
-  margin-bottom: 20px;
+  margin-bottom: 
+  
+/* ボタン　*/
+.button-container {
+
+display: flex;
+
+justify-content: center;
+
+gap: 15px;
+
+margin-top: 30px;
+
+flex-wrap: wrap;
+
 }
 
-/* ボタン */
 .button {
-  display: block;
-  width: 60%;
-  max-width: 300px;
-  margin: 20px auto;
-  padding: 25px;
-  font-size: 24px;
-  border: 3px solid #ffffff;
-  border-radius: 20px;
-  text-decoration: none;
-  color: #ffffff;
+
+font-size: 16px;
+
+padding: 10px 20px;
+
+background-color: #222;
+
+color: white;
+
+text-decoration: none;
+
+border-radius: 10px;
+
 }
 
 @keyframes fadeIn {
@@ -69,12 +85,16 @@ opacity: 1;
 
 
 <img src="IMG_6887.jpeg" class="bottom-img">
+  
+<div class="button-container">
 
 <a href="diary.html" class="button">日記</a>
 
 <a href="favorites.html" class="button">好きなもの</a>
 
 <a href="creation.html" class="button">作ったもの</a>
+
+</div>
 
 
 </body>
