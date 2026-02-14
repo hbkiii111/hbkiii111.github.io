@@ -12,17 +12,38 @@
 body {
 
   background-color: #222222;
-  color: #ffffff;
+  color: #eeeeee;
   font-family: sans-serif;
 
   max-width: 680px;
-
   margin: auto;
 
-  padding: 60px 20px 30px 20px; /* ←上余白減らした */
+  padding: 60px 20px 30px;
 
 }
 
+
+/* 戻る */
+.back-btn {
+
+  position: fixed;
+
+  top: 12px;
+  left: 12px;
+
+  font-size: 12px;
+
+  padding: 6px 12px;
+
+  border: 1px solid #555;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  color: #eee;
+
+}
 
 
 /* タイトル */
@@ -30,9 +51,9 @@ h1 {
 
   text-align: center;
 
-  font-size: 26px;
+  font-size: 24px;
 
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
 }
 
@@ -42,25 +63,25 @@ h1 {
 
   text-align: center;
 
-  font-size: 14px; /* ←デスクトップ少し大きく */
+  font-size: 14px;
 
-  color: #cccccc;
+  color: #aaa;
 
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   line-height: 1.6;
 
 }
 
 
-/* 日記 */
+/* 日記（一本線） */
 .post {
 
   margin-bottom: 35px;
 
   padding-bottom: 25px;
-  
-  border-bottom: 1px solid rgba(255,255,255,0.2); /* ← 一本線 */
+
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 
   font-size: 15px;
 
@@ -74,34 +95,9 @@ h1 {
 
   font-size: 11px;
 
-  opacity: 0.6;
+  color: #888;
 
   margin-bottom: 12px;
-
-}
-
-
-/* 戻るボタン */
-.back-btn {
-
-  position: fixed;
-
-  top: 12px;
-  left: 12px;
-
-  padding: 6px 12px;
-
-  font-size: 12px;
-
-  border: 1px solid #ffffff;
-
-  border-radius: 10px;
-
-  text-decoration: none;
-
-  color: #ffffff;
-
-  background-color: #222222;
 
 }
 
@@ -110,64 +106,40 @@ h1 {
 /* 📱スマホ */
 @media (max-width: 600px) {
 
-
 body {
 
-padding: 50px 16px 25px 16px;
+padding: 50px 16px 25px;
 
 }
-
 
 h1 {
 
-font-size: 22px;
+font-size: 20px;
 
 }
-
 
 .message {
 
-font-size: 12px; /* ←スマホは少し大きく */
-
-margin-bottom: 25px;
+font-size: 15px;
 
 }
-
 
 .post {
 
 font-size: 14px;
 
-padding: 18px;
-
 }
 
-
-.date {
-
-font-size: 10px;
-
 }
-
-
-.back-btn {
-
-font-size: 11px;
-
-padding: 5px 10px;
-
-}
-
-
-}
-
 
 </style>
+
 </head>
 
 <body>
 
-<a href="index.html" class="back-btn">← トップへ</a>
+
+<a href="index.html" class="back-btn">← トップ</a>
 
 
 <h1>日記</h1>
@@ -175,11 +147,13 @@ padding: 5px 10px;
 
 <div class="message">
 
-毎日かく<br>
-意味わからないことも言う
+毎日書く！
 
 </div>
 
+
+
+<!-- 🌟 最新の日記を一番上に書く -->
 
 <div class="post">
 
@@ -192,6 +166,11 @@ Z世代のZの意味毎回忘れる。日本地図と同じ。小学生の時お
 義務教育の敗北ってバカにされるかもしれないけど、覚えられないものは仕方ないから。東京に行く用事があって色々調べた時に山手線全部覚えてたことがあったから、今のところあまり旅行に興味がないからわからないけど現地に行くことがあればきっといつか覚えると思う。
 
 </div>
+
+
+
+<!-- ↓次の日はこの上に追加する -->
+
 
 
 </body>
