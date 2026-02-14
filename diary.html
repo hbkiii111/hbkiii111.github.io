@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<!-- 📱スマホ対応（必須） -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>日記</title>
 <style>
 body {
@@ -10,8 +12,9 @@ body {
   font-family: sans-serif;
   max-width: 800px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 80px 20px 40px 20px;
 }
+
 .diary-img {
   width: 200px;
   border-radius: 15px;
@@ -29,11 +32,12 @@ h1 {
 /* 一言メッセージ */
 .message {
 
+text-align: center;
   font-size: 16px;
 
   color: #cccccc;
 
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 
 }
 
@@ -41,16 +45,16 @@ h1 {
 /* 日記ボックス */
 .post {
   margin-bottom: 50px;
-  padding: 35px;
-  border: 3px solid #ffffff;
+  padding: 30px;
+  border: 2px solid #ffffff;
   border-radius: 20px;
-  font-size: 24px;   /* ← ここが本文サイズ */
+  font-size: 22px;   /* ← ここが本文サイズ */
   line-height: 1.8;
 }
 
 /* 日付 */
 .date {
-  font-size: 16px;
+  font-size: 15px;
   opacity: 0.6;
   margin-bottom: 15px;
 }
@@ -60,15 +64,64 @@ h1 {
   position: fixed;
   top: 20px;
   left: 20px;
-  padding: 20px 30px;
-  font-size: 20px;
+  padding: 14px 22px;
+  font-size: 16px;
   font-weight: bold;
-  border: 3px solid #ffffff;
-  border-radius: 18px;
+  border: 2px solid #ffffff;
+  border-radius: 14px;
   text-decoration: none;
   color: #ffffff;
   background-color: #222222;
 }
+
+/* 📱スマホ用 */
+@media (max-width: 600px) {
+
+
+h1 {
+
+font-size: 26px;
+
+}
+
+
+.message {
+
+font-size: 14px;
+
+}
+
+
+.post {
+
+font-size: 18px;
+
+padding: 20px;
+
+}
+
+
+.back-btn {
+
+font-size: 14px;
+
+padding: 10px 16px;
+
+}
+
+
+.diary-img {
+
+width: 100%;
+
+max-width: 250px;
+
+}
+
+
+}
+
+
 </style>
 </head>
 
@@ -80,7 +133,8 @@ h1 {
 
 <div class="message">
 
-毎日かく。
+毎日かく<br>
+  意味わからないことも言う
 
 </div>
 
