@@ -2,119 +2,159 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- 📱スマホ対応（必須） -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>日記</title>
+
 <style>
+
 body {
+
   background-color: #222222;
   color: #ffffff;
   font-family: sans-serif;
-  max-width: 800px;
+
+  max-width: 680px;
+
   margin: auto;
-  padding: 80px 20px 40px 20px;
+
+  padding: 60px 20px 30px 20px; /* ←上余白減らした */
+
 }
 
-.diary-img {
-  width: 200px;
-  border-radius: 15px;
-  margin-top: 15px;
-}
+
 
 /* タイトル */
 h1 {
+
   text-align: center;
+
   font-size: 26px;
-  margin-bottom: 20px;
+
+  margin-bottom: 15px;
+
 }
 
 
-/* 一言メッセージ */
+/* ひとこと */
 .message {
 
-text-align: center;
-  font-size: 10px;
+  text-align: center;
+
+  font-size: 14px; /* ←デスクトップ少し大きく */
 
   color: #cccccc;
 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+
+  line-height: 1.6;
 
 }
 
 
-/* 日記ボックス */
+/* 日記 */
 .post {
-  margin-bottom: 50px;
-  padding: 30px;
-  border: 2px solid #ffffff;
-  border-radius: 20px;
-  font-size: 14px;   /* ← ここが本文サイズ */
-  line-height: 1.8;
+
+  margin-bottom: 35px;
+
+  padding-bottom: 25px;
+  
+  border-bottom: 1px solid rgba(255,255,255,0.2); /* ← 一本線 */
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
 }
+
 
 /* 日付 */
 .date {
-  font-size: 8px;
+
+  font-size: 11px;
+
   opacity: 0.6;
-  margin-bottom: 15px;
+
+  margin-bottom: 12px;
+
 }
 
-/* 戻るボタン（左上固定） */
+
+/* 戻るボタン */
 .back-btn {
+
   position: fixed;
-  top: 20px;
-  left: 20px;
-  padding: 8px 14px;
-  font-size: 13px;
-  font-weight: bold;
-  border: 2px solid #ffffff;
-  border-radius: 14px;
+
+  top: 12px;
+  left: 12px;
+
+  padding: 6px 12px;
+
+  font-size: 12px;
+
+  border: 1px solid #ffffff;
+
+  border-radius: 10px;
+
   text-decoration: none;
+
   color: #ffffff;
+
   background-color: #222222;
+
 }
 
-/* 📱スマホ用 */
+
+
+/* 📱スマホ */
 @media (max-width: 600px) {
+
+
+body {
+
+padding: 50px 16px 25px 16px;
+
+}
 
 
 h1 {
 
-font-size: 21px;
+font-size: 22px;
 
 }
 
 
 .message {
 
-font-size: 8px;
+font-size: 12px; /* ←スマホは少し大きく */
+
+margin-bottom: 25px;
 
 }
 
 
 .post {
 
-font-size: 12px;
+font-size: 14px;
 
-padding: 20px;
+padding: 18px;
+
+}
+
+
+.date {
+
+font-size: 10px;
 
 }
 
 
 .back-btn {
 
-font-size: 10px;
+font-size: 11px;
 
-padding: 6px 10px;
-
-}
-
-
-.diary-img {
-
-width: 100%;
-
-max-width: 250px;
+padding: 5px 10px;
 
 }
 
@@ -129,23 +169,30 @@ max-width: 250px;
 
 <a href="index.html" class="back-btn">← トップへ</a>
 
+
 <h1>日記</h1>
+
 
 <div class="message">
 
 毎日かく<br>
-  意味わからないことも言う
+意味わからないことも言う
 
 </div>
+
 
 <div class="post">
-  <div class="date">2025/08/09</div>
-  Z世代のZの意味毎回忘れる。日本地図と同じ。小学生の時おばあちゃんと暗記合宿したけど全然覚えられなかった。 
-  
-  関東で生まれたのに群馬と栃木どっちがどっちかわからない。岩手と秋田もわからない。近畿地方が1番よくわからなくて、今縦長の六角形みたいなやつ想像してる。 でも中部地方は県名全部つぶやいた時に語呂とリズムがいいから覚えてる。場所もわかる。
-  
-  義務教育の敗北ってバカにされるかもしれないけど、覚えられないものは仕方ないから。東京に行く用事があって色々調べた時に山手線全部覚えてたことがあったから、今のところあまり旅行に興味がないからわからないけど現地に行くことがあればきっといつか覚えると思う。
+
+<div class="date">2025/08/09</div>
+
+Z世代のZの意味毎回忘れる。日本地図と同じ。小学生の時おばあちゃんと暗記合宿したけど全然覚えられなかった。<br><br>
+
+関東で生まれたのに群馬と栃木どっちがどっちかわからない。岩手と秋田もわからない。近畿地方が1番よくわからなくて、今縦長の六角形みたいなやつ想像してる。でも中部地方は県名全部つぶやいた時に語呂とリズムがいいから覚えてる。場所もわかる。<br><br>
+
+義務教育の敗北ってバカにされるかもしれないけど、覚えられないものは仕方ないから。東京に行く用事があって色々調べた時に山手線全部覚えてたことがあったから、今のところあまり旅行に興味がないからわからないけど現地に行くことがあればきっといつか覚えると思う。
+
 </div>
+
 
 </body>
 </html>
