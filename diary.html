@@ -11,8 +11,8 @@
 
 body {
 
-  background-color: #222222;
-  color: #eeeeee;
+  background-color: #222;
+  color: #eee;
   font-family: sans-serif;
 
   max-width: 680px;
@@ -27,20 +27,16 @@ body {
 .back-btn {
 
   position: fixed;
-
   top: 12px;
   left: 12px;
 
   font-size: 12px;
-
   padding: 6px 12px;
 
   border: 1px solid #555;
-
   border-radius: 10px;
 
   text-decoration: none;
-
   color: #eee;
 
 }
@@ -50,41 +46,32 @@ body {
 h1 {
 
   text-align: center;
-
   font-size: 24px;
-
   margin-bottom: 10px;
 
 }
 
 
-/* ひとこと */
+/* 一言 */
 .message {
 
   text-align: center;
-
   font-size: 14px;
-
   color: #aaa;
-
   margin-bottom: 40px;
-
-  line-height: 1.6;
 
 }
 
 
-/* 日記（一本線） */
+/* 日記 */
 .post {
 
   margin-bottom: 35px;
-
   padding-bottom: 25px;
 
   border-bottom: 1px solid rgba(255,255,255,0.2);
 
   font-size: 15px;
-
   line-height: 1.9;
 
 }
@@ -94,39 +81,84 @@ h1 {
 .date {
 
   font-size: 11px;
-
   color: #888;
-
   margin-bottom: 12px;
 
 }
 
 
+/* 🌙 画像エリア */
+.photo {
 
-/* 📱スマホ */
+  margin-top: 15px;
+
+  display: flex;
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+}
+
+
+/* 画像 */
+.photo img {
+
+  width: 100%;
+  max-width: 200px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+/* hover */
+.photo img:hover {
+
+  opacity: 0.8;
+
+}
+
+
+/* 拡大表示 */
+#overlay {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.9);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+#overlay img {
+
+  max-width: 90%;
+  max-height: 90%;
+
+}
+
+
+
+/* スマホ */
 @media (max-width: 600px) {
 
-body {
+.photo img {
 
-padding: 50px 16px 25px;
-
-}
-
-h1 {
-
-font-size: 20px;
-
-}
-
-.message {
-
-font-size: 15px;
-
-}
-
-.post {
-
-font-size: 14px;
+max-width: 100%;
 
 }
 
@@ -147,30 +179,57 @@ font-size: 14px;
 
 <div class="message">
 
-毎日書く！
+毎日かく<br>
+意味わからないことも言う
 
 </div>
 
 
 
-<!-- 🌟 最新の日記を一番上に書く -->
+<!-- 日記 -->
 
 <div class="post">
 
-<div class="date">2025/08/09</div>
+<div class="date">2025/08/10</div>
 
-Z世代のZの意味毎回忘れる。日本地図と同じ。小学生の時おばあちゃんと暗記合宿したけど全然覚えられなかった。<br><br>
-
-関東で生まれたのに群馬と栃木どっちがどっちかわからない。岩手と秋田もわからない。近畿地方が1番よくわからなくて、今縦長の六角形みたいなやつ想像してる。でも中部地方は県名全部つぶやいた時に語呂とリズムがいいから覚えてる。場所もわかる。<br><br>
-
+Z世代のZの意味毎回忘れる。日本地図と同じ。小学生の時おばあちゃんと暗記合宿したけど全然覚えられなかった。<br>
+関東で生まれたのに群馬と栃木どっちがどっちかわからない。岩手と秋田もわからない。近畿地方が1番よくわからなくて、今縦長の六角形みたいなやつ想像してる。でも中部地方は県名全部つぶやいた時に語呂とリズムがいいから覚えてる。場所もわかる。<br>
 義務教育の敗北ってバカにされるかもしれないけど、覚えられないものは仕方ないから。東京に行く用事があって色々調べた時に山手線全部覚えてたことがあったから、今のところあまり旅行に興味がないからわからないけど現地に行くことがあればきっといつか覚えると思う。
 
 </div>
 
+</div>
 
 
-<!-- ↓次の日はこの上に追加する -->
 
+
+<!-- 拡大用 -->
+<div id="overlay" onclick="closeImg()">
+
+<img id="big">
+
+</div>
+
+
+
+<script>
+
+function openImg(src){
+
+document.getElementById("overlay").style.display="flex";
+
+document.getElementById("big").src=src;
+
+}
+
+
+function closeImg(){
+
+document.getElementById("overlay").style.display="none";
+
+}
+
+</script>
 
 
 </body>
