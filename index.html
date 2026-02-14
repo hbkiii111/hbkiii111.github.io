@@ -11,74 +11,94 @@ body {
   color: #ffffff;
   font-family: sans-serif;
   text-align: center;
-  }
-  
-.bottom-img {
-  width: 65%;
-  max-width: 300px;
-  margin-top: 40px;
-  border-radius: 15px;
-
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1.5s;
 }
+
 
 /* タイトル */
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   margin-top: 70px;
-  margin-bottom: 
-  
-/* ボタン　*/
+  margin-bottom: 30px;
+}
+
+
+/* タイトルとボタンの間の画像 */
+.bottom-img {
+
+  width: 40%;   /* ←小さくした */
+  max-width: 180px;
+
+  margin-bottom: 40px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+
+}
+
+
+/* ボタンまとめ */
 .button-container {
 
-display: flex;
+  display: flex;
 
-justify-content: center;
+  justify-content: center;
 
-gap: 15px;
+  gap: 25px; /* ←間隔広げた */
 
-margin-top: 30px;
+  margin-top: 20px;
 
-flex-wrap: wrap;
+  flex-wrap: wrap;
 
 }
 
+
+/* ボタン */
 .button {
 
-font-size: 20px;
+  font-size: 22px; /* ←大きくした */
 
-padding: 10px 20px;
+  padding: 15px 30px; /* ←大きくした */
 
-background-color: #222;
+  background: linear-gradient(145deg, #333, #111);
 
-color: white;
+  color: white;
 
-text-decoration: none;
+  text-decoration: none;
 
-border-radius: 10px;
+  border-radius: 15px;
 
-transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
+  transition: 0.3s;
 
 }
 
+
+/* ホバー */
 .button:hover {
 
-background-color: #444;
+  transform: scale(1.1);
 
-transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
 
 }
+
 
 @keyframes fadeIn {
 
 from {
 opacity: 0;
+transform: translateY(20px);
 }
 
 to {
 opacity: 1;
+transform: translateY(0);
 }
 
 }
@@ -90,12 +110,12 @@ opacity: 1;
 <body>
 
 
-
 <h1>🍀見てくれてありがとう🍀</h1>
 
 
 <img src="IMG_6887.jpeg" class="bottom-img">
-  
+
+
 <div class="button-container">
 
 <a href="diary.html" class="button">日記</a>
